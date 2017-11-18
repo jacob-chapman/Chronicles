@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51E7D0355090E304C472BD5 /* Pods_Chronicles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57AA98649C4A09D37607B1C /* Pods_Chronicles.framework */; };
+		DB327AEC1FB6181300EAA75D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB327AEB1FB6181300EAA75D /* HomeViewModel.swift */; };
+		DB327AEE1FB622ED00EAA75D /* HomeDataAccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB327AED1FB622ED00EAA75D /* HomeDataAccessModel.swift */; };
+		DB32F4A51FB7BA30007BB2F2 /* HomeDataModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32F4A41FB7BA30007BB2F2 /* HomeDataModelExtensions.swift */; };
+		DB32F4A81FB8A6F0007BB2F2 /* HomeInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32F4A71FB8A6F0007BB2F2 /* HomeInputViewController.swift */; };
+		DB32F4AB1FB8C337007BB2F2 /* Dismissal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32F4AA1FB8C337007BB2F2 /* Dismissal.swift */; };
+		DB4896031FB0E06800D3AA43 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4896021FB0E06800D3AA43 /* NavigationController.swift */; };
+		DBEEC0E31FBBCC6500CA8F55 /* JobDataAccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEC0E21FBBCC6500CA8F55 /* JobDataAccessModel.swift */; };
+		DBEEC0E51FBBCE9000CA8F55 /* JobsDataModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEC0E41FBBCE9000CA8F55 /* JobsDataModelExtensions.swift */; };
 		DBF2925F1F9EBC8600760EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2925E1F9EBC8600760EB8 /* AppDelegate.swift */; };
-		DBF292611F9EBC8600760EB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF292601F9EBC8600760EB8 /* ViewController.swift */; };
+		DBF292611F9EBC8600760EB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF292601F9EBC8600760EB8 /* HomeViewController.swift */; };
 		DBF292641F9EBC8600760EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF292621F9EBC8600760EB8 /* Main.storyboard */; };
 		DBF292671F9EBC8600760EB8 /* Chronicles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBF292651F9EBC8600760EB8 /* Chronicles.xcdatamodeld */; };
 		DBF292691F9EBC8600760EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF292681F9EBC8600760EB8 /* Assets.xcassets */; };
 		DBF2926C1F9EBC8600760EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF2926A1F9EBC8600760EB8 /* LaunchScreen.storyboard */; };
 		DBF292771F9EBC8600760EB8 /* ChroniclesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF292761F9EBC8600760EB8 /* ChroniclesTests.swift */; };
 		DBF292821F9EBC8600760EB8 /* ChroniclesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF292811F9EBC8600760EB8 /* ChroniclesUITests.swift */; };
+		DBF292901FAA82A400760EB8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2928F1FAA82A400760EB8 /* Constants.swift */; };
+		DBF292921FABD2C600760EB8 /* ChroniclesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF292911FABD2C600760EB8 /* ChroniclesTabBarController.swift */; };
+		DBF292941FABE04D00760EB8 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF292931FABE04D00760EB8 /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +47,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49BD6E09D50120CDAC813312 /* Pods-Chronicles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chronicles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chronicles/Pods-Chronicles.debug.xcconfig"; sourceTree = "<group>"; };
+		523E5B9DA72A2E201ECE39EA /* Pods_ChroniclesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChroniclesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F687699C2AEFC2AAFC85F95 /* Pods_ChroniclesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChroniclesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A11DE656FF94EF8085E2895 /* Pods-Chronicles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chronicles.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chronicles/Pods-Chronicles.release.xcconfig"; sourceTree = "<group>"; };
+		D57AA98649C4A09D37607B1C /* Pods_Chronicles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chronicles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB327AEB1FB6181300EAA75D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DB327AED1FB622ED00EAA75D /* HomeDataAccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataAccessModel.swift; sourceTree = "<group>"; };
+		DB32F4A41FB7BA30007BB2F2 /* HomeDataModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModelExtensions.swift; sourceTree = "<group>"; };
+		DB32F4A71FB8A6F0007BB2F2 /* HomeInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInputViewController.swift; sourceTree = "<group>"; };
+		DB32F4AA1FB8C337007BB2F2 /* Dismissal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissal.swift; sourceTree = "<group>"; };
+		DB4895FF1FACBB4700D3AA43 /* Chronicles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chronicles-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB4896021FB0E06800D3AA43 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		DBEEC0E21FBBCC6500CA8F55 /* JobDataAccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataAccessModel.swift; sourceTree = "<group>"; };
+		DBEEC0E41FBBCE9000CA8F55 /* JobsDataModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataModelExtensions.swift; sourceTree = "<group>"; };
 		DBF2925B1F9EBC8600760EB8 /* Chronicles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chronicles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF2925E1F9EBC8600760EB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBF292601F9EBC8600760EB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBF292601F9EBC8600760EB8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DBF292631F9EBC8600760EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBF292661F9EBC8600760EB8 /* Chronicles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chronicles.xcdatamodel; sourceTree = "<group>"; };
 		DBF292681F9EBC8600760EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +75,9 @@
 		DBF2927D1F9EBC8600760EB8 /* ChroniclesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChroniclesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF292811F9EBC8600760EB8 /* ChroniclesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChroniclesUITests.swift; sourceTree = "<group>"; };
 		DBF292831F9EBC8600760EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBF2928F1FAA82A400760EB8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DBF292911FABD2C600760EB8 /* ChroniclesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChroniclesTabBarController.swift; sourceTree = "<group>"; };
+		DBF292931FABE04D00760EB8 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51E7D0355090E304C472BD5 /* Pods_Chronicles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +106,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43A4B3845E871F5A4F971E77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49BD6E09D50120CDAC813312 /* Pods-Chronicles.debug.xcconfig */,
+				6A11DE656FF94EF8085E2895 /* Pods-Chronicles.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA0FBB3ED0A14787327D5139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F687699C2AEFC2AAFC85F95 /* Pods_ChroniclesTests.framework */,
+				523E5B9DA72A2E201ECE39EA /* Pods_ChroniclesUITests.framework */,
+				D57AA98649C4A09D37607B1C /* Pods_Chronicles.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB327AE61FB1110F00EAA75D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB327AED1FB622ED00EAA75D /* HomeDataAccessModel.swift */,
+				DB32F4A41FB7BA30007BB2F2 /* HomeDataModelExtensions.swift */,
+				DBEEC0E21FBBCC6500CA8F55 /* JobDataAccessModel.swift */,
+				DBEEC0E41FBBCE9000CA8F55 /* JobsDataModelExtensions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB327AE91FB6176F00EAA75D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DB327AEB1FB6181300EAA75D /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DB32F4A61FB8A6DB007BB2F2 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				DB32F4A71FB8A6F0007BB2F2 /* HomeInputViewController.swift */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+		DB32F4A91FB8C323007BB2F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB32F4AA1FB8C337007BB2F2 /* Dismissal.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DB4895FE1FACB5FE00D3AA43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB32F4A61FB8A6DB007BB2F2 /* Forms */,
+				DBF292601F9EBC8600760EB8 /* HomeViewController.swift */,
+				DBF292911FABD2C600760EB8 /* ChroniclesTabBarController.swift */,
+				DBF292931FABE04D00760EB8 /* HomeTableViewController.swift */,
+				DB4896021FB0E06800D3AA43 /* NavigationController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DBF292521F9EBC8600760EB8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +179,8 @@
 				DBF292751F9EBC8600760EB8 /* ChroniclesTests */,
 				DBF292801F9EBC8600760EB8 /* ChroniclesUITests */,
 				DBF2925C1F9EBC8600760EB8 /* Products */,
+				43A4B3845E871F5A4F971E77 /* Pods */,
+				DA0FBB3ED0A14787327D5139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +197,18 @@
 		DBF2925D1F9EBC8600760EB8 /* Chronicles */ = {
 			isa = PBXGroup;
 			children = (
+				DB32F4A91FB8C323007BB2F2 /* Helpers */,
+				DB327AE91FB6176F00EAA75D /* ViewModels */,
+				DB327AE61FB1110F00EAA75D /* Models */,
+				DB4895FF1FACBB4700D3AA43 /* Chronicles-Bridging-Header.h */,
 				DBF2925E1F9EBC8600760EB8 /* AppDelegate.swift */,
-				DBF292601F9EBC8600760EB8 /* ViewController.swift */,
+				DB4895FE1FACB5FE00D3AA43 /* Views */,
 				DBF292621F9EBC8600760EB8 /* Main.storyboard */,
 				DBF292681F9EBC8600760EB8 /* Assets.xcassets */,
 				DBF2926A1F9EBC8600760EB8 /* LaunchScreen.storyboard */,
 				DBF2926D1F9EBC8600760EB8 /* Info.plist */,
 				DBF292651F9EBC8600760EB8 /* Chronicles.xcdatamodeld */,
+				DBF2928F1FAA82A400760EB8 /* Constants.swift */,
 			);
 			path = Chronicles;
 			sourceTree = "<group>";
@@ -135,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBF292861F9EBC8600760EB8 /* Build configuration list for PBXNativeTarget "Chronicles" */;
 			buildPhases = (
+				711A25A7A7409BBBFD2EFCB3 /* [CP] Check Pods Manifest.lock */,
 				DBF292571F9EBC8600760EB8 /* Sources */,
 				DBF292581F9EBC8600760EB8 /* Frameworks */,
 				DBF292591F9EBC8600760EB8 /* Resources */,
+				152CA11955BCAF82ED1DED05 /* [CP] Embed Pods Frameworks */,
+				AA7B64BBE522877FA9D08068 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +363,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		152CA11955BCAF82ED1DED05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chronicles/Pods-Chronicles-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chronicles/Pods-Chronicles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		711A25A7A7409BBBFD2EFCB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chronicles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA7B64BBE522877FA9D08068 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chronicles/Pods-Chronicles-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chronicles/Pods-Chronicles-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DBF292571F9EBC8600760EB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF292941FABE04D00760EB8 /* HomeTableViewController.swift in Sources */,
+				DB4896031FB0E06800D3AA43 /* NavigationController.swift in Sources */,
+				DB32F4A81FB8A6F0007BB2F2 /* HomeInputViewController.swift in Sources */,
+				DB32F4A51FB7BA30007BB2F2 /* HomeDataModelExtensions.swift in Sources */,
 				DBF292671F9EBC8600760EB8 /* Chronicles.xcdatamodeld in Sources */,
-				DBF292611F9EBC8600760EB8 /* ViewController.swift in Sources */,
+				DB327AEE1FB622ED00EAA75D /* HomeDataAccessModel.swift in Sources */,
+				DB327AEC1FB6181300EAA75D /* HomeViewModel.swift in Sources */,
+				DBF292921FABD2C600760EB8 /* ChroniclesTabBarController.swift in Sources */,
+				DBF292611F9EBC8600760EB8 /* HomeViewController.swift in Sources */,
+				DBEEC0E51FBBCE9000CA8F55 /* JobsDataModelExtensions.swift in Sources */,
 				DBF2925F1F9EBC8600760EB8 /* AppDelegate.swift in Sources */,
+				DBF292901FAA82A400760EB8 /* Constants.swift in Sources */,
+				DB32F4AB1FB8C337007BB2F2 /* Dismissal.swift in Sources */,
+				DBEEC0E31FBBCC6500CA8F55 /* JobDataAccessModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +605,11 @@
 		};
 		DBF292871F9EBC8600760EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49BD6E09D50120CDAC813312 /* Pods-Chronicles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TS3DJKGBE;
 				INFOPLIST_FILE = Chronicles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.airecodes.Chronicles;
@@ -442,9 +621,11 @@
 		};
 		DBF292881F9EBC8600760EB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A11DE656FF94EF8085E2895 /* Pods-Chronicles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TS3DJKGBE;
 				INFOPLIST_FILE = Chronicles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.airecodes.Chronicles;
