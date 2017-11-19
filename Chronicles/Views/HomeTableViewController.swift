@@ -57,14 +57,9 @@ class JobsTableViewController : UIViewController, UITableViewDataSource, UITable
     
     @IBAction func addTapped(sender:UIBarButtonItem){
         print("bar button tapped")
-        
         let vc =  JobDataEntryViewController()
-//        let navController = UINavigationController(rootViewController: vc)
-        
+        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
-        
-        //finally presenting the dialog box
-//        self.navigationController?.present(navController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
