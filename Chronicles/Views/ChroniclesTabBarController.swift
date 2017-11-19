@@ -22,15 +22,15 @@ class ChroniclesTabBarController : UITabBarController, UITabBarControllerDelegat
         super.viewWillAppear(animated)
         
         let tabBarOne = HomeViewController(fromTable: false)
-        let tabBarTwo = HomeTableViewController()
+        let tabBarTwo = JobsTableViewController()
         
         tabBarOne.view.backgroundColor = Color.backgroundColor
         
         tabBarOne.title = "Home"
-        tabBarTwo.title = "Fitness"
+        tabBarTwo.title = "Jobs"
         
         let homeTabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home"), selectedImage: UIImage(named: "ic_home"))
-        let fitnessTabBarItem = UITabBarItem(title: "Fitness", image: UIImage(named: "ic_fitness_center"), selectedImage: UIImage(named: "ic_fitness_center"))
+        let fitnessTabBarItem = UITabBarItem(title: "Jobs", image: UIImage(named: "ic_fitness_center"), selectedImage: UIImage(named: "ic_fitness_center"))
         
         
         tabBarOne.tabBarItem = homeTabBarItem

@@ -14,6 +14,8 @@
 		DB32F4A81FB8A6F0007BB2F2 /* HomeInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32F4A71FB8A6F0007BB2F2 /* HomeInputViewController.swift */; };
 		DB32F4AB1FB8C337007BB2F2 /* Dismissal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32F4AA1FB8C337007BB2F2 /* Dismissal.swift */; };
 		DB4896031FB0E06800D3AA43 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4896021FB0E06800D3AA43 /* NavigationController.swift */; };
+		DBCD843E1FC099D700B60590 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD843D1FC099D700B60590 /* JobsViewModel.swift */; };
+		DBCD84401FC0D2DB00B60590 /* JobDataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD843F1FC0D2DB00B60590 /* JobDataEntryViewController.swift */; };
 		DBEEC0E31FBBCC6500CA8F55 /* JobDataAccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEC0E21FBBCC6500CA8F55 /* JobDataAccessModel.swift */; };
 		DBEEC0E51FBBCE9000CA8F55 /* JobsDataModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEEC0E41FBBCE9000CA8F55 /* JobsDataModelExtensions.swift */; };
 		DBF2925F1F9EBC8600760EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2925E1F9EBC8600760EB8 /* AppDelegate.swift */; };
@@ -59,6 +61,8 @@
 		DB32F4AA1FB8C337007BB2F2 /* Dismissal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissal.swift; sourceTree = "<group>"; };
 		DB4895FF1FACBB4700D3AA43 /* Chronicles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chronicles-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB4896021FB0E06800D3AA43 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		DBCD843D1FC099D700B60590 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
+		DBCD843F1FC0D2DB00B60590 /* JobDataEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataEntryViewController.swift; sourceTree = "<group>"; };
 		DBEEC0E21FBBCC6500CA8F55 /* JobDataAccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataAccessModel.swift; sourceTree = "<group>"; };
 		DBEEC0E41FBBCE9000CA8F55 /* JobsDataModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataModelExtensions.swift; sourceTree = "<group>"; };
 		DBF2925B1F9EBC8600760EB8 /* Chronicles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chronicles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DB327AEB1FB6181300EAA75D /* HomeViewModel.swift */,
+				DBCD843D1FC099D700B60590 /* JobsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				DB32F4A71FB8A6F0007BB2F2 /* HomeInputViewController.swift */,
+				DBCD843F1FC0D2DB00B60590 /* JobDataEntryViewController.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -428,7 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCD843E1FC099D700B60590 /* JobsViewModel.swift in Sources */,
 				DBF292941FABE04D00760EB8 /* HomeTableViewController.swift in Sources */,
+				DBCD84401FC0D2DB00B60590 /* JobDataEntryViewController.swift in Sources */,
 				DB4896031FB0E06800D3AA43 /* NavigationController.swift in Sources */,
 				DB32F4A81FB8A6F0007BB2F2 /* HomeInputViewController.swift in Sources */,
 				DB32F4A51FB7BA30007BB2F2 /* HomeDataModelExtensions.swift in Sources */,

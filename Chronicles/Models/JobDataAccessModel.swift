@@ -59,6 +59,8 @@ class JobDataAccessModel {
         }
     }
     
+    // MARK: toggle jobs completed flag
+    
     public func toggleJobIsComplete(withIndex index: Int){
         jobsFromCoreData.value[index].completed = !jobsFromCoreData.value[index].completed
         
@@ -70,4 +72,14 @@ class JobDataAccessModel {
         }
     }
     
+    public func removeJob(withIndex index: Int){
+        managedObjectContext.delete(jobsFromCoreData.value[index])
+        
+        do {
+            try managedObjectContext.save()
+            jobsFromCoreData.value = fetchJobs()
+        } catch {
+            fatalError("error deleting jobs")
+        }
+    }
 }

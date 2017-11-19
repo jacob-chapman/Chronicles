@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class HomeTableViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
+class JobsTableViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, DismissalDelegate {
     var myTableView: UITableView  =   UITableView()
     var itemsToLoad: [String] = ["One", "Two", "Three"]
     
@@ -35,8 +35,6 @@ class HomeTableViewController : UIViewController, UITableViewDataSource, UITable
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
         
-        let numberOfRows = 50
-        
         var index = 0
         
         while(index < 50){
@@ -53,14 +51,20 @@ class HomeTableViewController : UIViewController, UITableViewDataSource, UITable
         
         self.view.addSubview(myTableView)
         
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        let addBarItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped(sender:)))
+        self.navigationItem.rightBarButtonItem = addBarItem
     }
     
     @IBAction func addTapped(sender:UIBarButtonItem){
         print("bar button tapped")
         
-        self.navigationController?.present(HomeViewController(fromTable: true), animated: true, completion: nil)
+        let vc =  JobDataEntryViewController()
+//        let navController = UINavigationController(rootViewController: vc)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        //finally presenting the dialog box
+//        self.navigationController?.present(navController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
