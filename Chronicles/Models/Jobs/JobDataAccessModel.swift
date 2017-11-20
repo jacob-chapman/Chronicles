@@ -42,14 +42,17 @@ class JobDataAccessModel {
         return jobsFromCoreData.asObservable()
     }
     
-    public func addJob(withName name: String, withDueDate dueDate: Date, withNotes notes: String, assignedTo person: Person){
+    public func addJob(withName name: String, withDueDate dueDate: Date, withNotes notes: String?, assignedTo person: Person?){
         
         let newJob = Job(context: managedObjectContext)
         
         newJob.dueDate = dueDate
         newJob.name = name
         newJob.notes = notes
-        newJob.assignedTo = person
+        
+        if person != nil {
+            newJob.assignedTo = person
+        }
         
         do {
             try managedObjectContext.save()

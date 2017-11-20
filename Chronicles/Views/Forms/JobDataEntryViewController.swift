@@ -11,6 +11,8 @@ import UIKit
 
 class JobDataEntryViewController : UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
+    var jobsViewModel: JobsViewModel?
+    
     let nameTag = 100
     let dueDateTag = 101
     let notesTag = 102
@@ -90,7 +92,6 @@ class JobDataEntryViewController : UIViewController, UITextFieldDelegate, UIText
         if textField.tag == 101 {
             textField.inputView = dueDateField
         }
-        
         return true
     }
     
@@ -247,11 +248,22 @@ class JobDataEntryViewController : UIViewController, UITextFieldDelegate, UIText
     
     @IBAction func savePressed(sender: UIBarButtonItem){
     
-    }
-    
-    @IBAction func cancelPressed(sender: UIBarButtonItem){
-//        dismissalDelegate?.finishedShowing(viewController: self.navigationController!)
-        
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        if !(jobNameTextField.text?.isEmpty)! && !(jobDueDateTextField.text?.isEmpty)! {
+            var jobNotes: String?
+            
+            if jobNotesTextField.text! == "Job Notes" {
+                jobNotes = nil
+            } else {
+                jobNotes = jobNotesTextField.text!
+            }
+            
+            jobsViewModel?.addJob(withName: jobNameTextField.text!, withDueDate: dueDateField.date, withNotes: jobNotes, assignedTo: nil)
+            
+            self.navigationController?.popViewController(animated: true)
+        }else{
+            let alert = UIAlertController(title: "Invalid Job", message: "Please make sure all required fields are completed", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

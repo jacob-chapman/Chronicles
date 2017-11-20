@@ -34,7 +34,7 @@ struct JobsViewModel {
             .disposed(by: disposeBag)
     }
     
-    public func addJob(withName name: String, withDueDate dueDate: Date, withNotes notes: String, assignedTo person: Person){
+    public func addJob(withName name: String, withDueDate dueDate: Date, withNotes notes: String?, assignedTo person: Person?){
         jobsDataAccessProvider.addJob(withName: name, withDueDate: dueDate, withNotes: notes, assignedTo: person)
     }
     

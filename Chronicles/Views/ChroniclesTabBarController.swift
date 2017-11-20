@@ -30,7 +30,7 @@ class ChroniclesTabBarController : UITabBarController, UITabBarControllerDelegat
         tabBarTwo.title = "Jobs"
         
         let homeTabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home"), selectedImage: UIImage(named: "ic_home"))
-        let fitnessTabBarItem = UITabBarItem(title: "Jobs", image: UIImage(named: "ic_fitness_center"), selectedImage: UIImage(named: "ic_fitness_center"))
+        let fitnessTabBarItem = UITabBarItem(title: "Jobs", image: UIImage(named: "ic_assignment"), selectedImage: UIImage(named: "ic_assignment"))
         
         
         tabBarOne.tabBarItem = homeTabBarItem
