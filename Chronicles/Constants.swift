@@ -12,7 +12,7 @@ import UIKit
 struct Color {
     static let primaryColor = UIColor.blue
     static let secondaryColor = UIColor.darkGray
-    static let backgroundColor = UIColor.init(red: 245, green: 243, blue: 238, alpha: 1.0)
+    static let backgroundColor = UIColor.init(red: 245/255, green: 243/255, blue: 238/255, alpha: 1.0)
     static let clouds = UIColor.init(red: 236/255, green: 240/255, blue: 241/255, alpha: 1.0)
 }
 

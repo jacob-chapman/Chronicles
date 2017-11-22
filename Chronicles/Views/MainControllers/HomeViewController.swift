@@ -26,36 +26,16 @@ class HomeViewController: UIViewController, DismissalDelegate {
         return view
     }()
     
-    lazy var label: UILabel! = {
-        let view = UILabel()
+    lazy var homeDashboardView: HomeDashboardView! = {
+        let view = HomeDashboardView(frame: CGRect(x: 0, y: 0, width: (self.view?.frame.width)!, height: 340))
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Hello World"
-        view.textAlignment = .center
         return view
     }()
-    
-    lazy var dismissButton: UIButton! = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(#imageLiteral(resourceName: "ic_clear"), for: .normal)
-        view.addTarget(self, action: #selector(dismissClicked), for: .touchDown)
-        return view
-    }()
-    
-    
-    var isFromTable: Bool = false
-    
-    init(fromTable isTable: Bool) {
-        super.init(nibName: nil, bundle: nil)
-        isFromTable = isTable
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = Color.backgroundColor
         
         let observableHomes = homeViewModel.fetchHome().asObservable()
         
@@ -69,12 +49,6 @@ class HomeViewController: UIViewController, DismissalDelegate {
             }
         }, onError: nil, onCompleted: nil, onDisposed: nil)
         .disposed(by: disposeBag)
-
-        if isFromTable {
-            view.addSubview(dismissButton)
-            dismissButtonConstraints()
-        }
-        
     }
 
     //MARK: Button Method
@@ -82,35 +56,9 @@ class HomeViewController: UIViewController, DismissalDelegate {
         let vc = HomeInputViewController()
         vc.homeViewModel = homeViewModel
         vc.dismissalDelegate = self
-        vc.modalPresentationStyle = .overFullScreen
-        self.navigationController?.present(vc, animated: true, completion: nil)
-    }
-    
-    @IBAction func dismissClicked(sender:UIButton){
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    //MARK: UI Constraint Functions
-    
-    func dismissButtonConstraints(){
-        
-        //Right Corner
-        NSLayoutConstraint(
-            item: dismissButton,
-            attribute: .right,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .right,
-            multiplier: 1.0,
-            constant: -5.0).isActive = true
-        
-        //Top
-        if #available(iOS 11, *) {
-            let guide = view.safeAreaLayoutGuide
-            dismissButton.topAnchor.constraint(equalTo: guide.topAnchor, constant: 5).isActive = true
-        } else {
-            dismissButton.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 5).isActive = true
-        }
+        vc.hidesBottomBarWhenPushed = true
+//        self.navigationController?.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //TODO reset view after adding or removing home
@@ -122,10 +70,14 @@ class HomeViewController: UIViewController, DismissalDelegate {
     }
     
     func setupHome(withHome home: Home){
-        view.addSubview(label)
-        labelConstraints()
+        view.addSubview(homeDashboardView)
         
-        label.text = home.name!
+        if  addHomeButton.isDescendant(of: self.view) {
+            addHomeButton.removeFromSuperview()
+        }
+
+//        homeDashboardConstraints()
+        homeDashboardView.homeModel = home
     }
     
     func addHomeButtonConstraints(){
@@ -158,10 +110,10 @@ class HomeViewController: UIViewController, DismissalDelegate {
             constant: 0).isActive = true
     }
     
-    func labelConstraints(){
+    func homeDashboardConstraints(){
         //Center textfield
         NSLayoutConstraint(
-            item: label,
+            item: homeDashboardView,
             attribute: .centerX,
             relatedBy: .equal,
             toItem: view,
@@ -171,7 +123,7 @@ class HomeViewController: UIViewController, DismissalDelegate {
         
         //Set width of the text field
         NSLayoutConstraint(
-            item: label,
+            item: homeDashboardView,
             attribute: .width,
             relatedBy: .equal,
             toItem: view,
@@ -180,12 +132,12 @@ class HomeViewController: UIViewController, DismissalDelegate {
             constant: 0.0).isActive = true
         
         NSLayoutConstraint(
-            item: label,
-            attribute: .centerY,
+            item: homeDashboardView,
+            attribute: .top,
             relatedBy: .equal,
             toItem: view,
-            attribute: .centerY,
-            multiplier: 1.0,
+            attribute: .bottom,
+            multiplier: 0.9,
             constant: 0.0).isActive = true
     }
 }

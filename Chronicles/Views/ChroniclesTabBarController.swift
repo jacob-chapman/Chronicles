@@ -21,7 +21,7 @@ class ChroniclesTabBarController : UITabBarController, UITabBarControllerDelegat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let tabBarOne = HomeViewController(fromTable: false)
+        let tabBarOne = HomeViewController()
         let tabBarTwo = JobsTableViewController()
         
         tabBarOne.view.backgroundColor = Color.backgroundColor

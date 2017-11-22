@@ -14,6 +14,7 @@
 		DB32F4A81FB8A6F0007BB2F2 /* HomeInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32F4A71FB8A6F0007BB2F2 /* HomeInputViewController.swift */; };
 		DB32F4AB1FB8C337007BB2F2 /* Dismissal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32F4AA1FB8C337007BB2F2 /* Dismissal.swift */; };
 		DB4896031FB0E06800D3AA43 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4896021FB0E06800D3AA43 /* NavigationController.swift */; };
+		DBAEFAFD1FC38CC20020CDAC /* HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAEFAFC1FC38CC20020CDAC /* HomeDashboardView.swift */; };
 		DBCD843E1FC099D700B60590 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD843D1FC099D700B60590 /* JobsViewModel.swift */; };
 		DBCD84401FC0D2DB00B60590 /* JobDataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD843F1FC0D2DB00B60590 /* JobDataEntryViewController.swift */; };
 		DBCD84441FC1FB2900B60590 /* JobsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD84431FC1FB2900B60590 /* JobsTableView.swift */; };
@@ -64,6 +65,7 @@
 		DB32F4AA1FB8C337007BB2F2 /* Dismissal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissal.swift; sourceTree = "<group>"; };
 		DB4895FF1FACBB4700D3AA43 /* Chronicles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chronicles-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB4896021FB0E06800D3AA43 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		DBAEFAFC1FC38CC20020CDAC /* HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDashboardView.swift; sourceTree = "<group>"; };
 		DBCD843D1FC099D700B60590 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		DBCD843F1FC0D2DB00B60590 /* JobDataEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataEntryViewController.swift; sourceTree = "<group>"; };
 		DBCD84431FC1FB2900B60590 /* JobsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				DBCD84411FC1FAB600B60590 /* MainControllers */,
 				DB32F4A61FB8A6DB007BB2F2 /* Forms */,
 				DB4896021FB0E06800D3AA43 /* NavigationController.swift */,
+				DBAEFAFC1FC38CC20020CDAC /* HomeDashboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				DBCD84491FC2096B00B60590 /* JobsTableDataSource.swift in Sources */,
 				DBF292901FAA82A400760EB8 /* Constants.swift in Sources */,
 				DB32F4AB1FB8C337007BB2F2 /* Dismissal.swift in Sources */,
+				DBAEFAFD1FC38CC20020CDAC /* HomeDashboardView.swift in Sources */,
 				DBEEC0E31FBBCC6500CA8F55 /* JobDataAccessModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

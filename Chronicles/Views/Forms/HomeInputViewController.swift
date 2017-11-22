@@ -67,51 +67,27 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
         return view
     }()
     
-    lazy var saveHomeButton: UIButton! = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints  = false
-        view.backgroundColor = Color.primaryColor
-        view.setTitle("Save", for: .normal)
-        view.addTarget(self, action: #selector(saveHomePressed(sender:)) , for: .touchUpInside)
-        return view
-    }()
-
-    lazy var cancelHomeButton: UIButton! = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints  = false
-        view.backgroundColor = UIColor.red
-        view.setTitleColor(UIColor.white, for: .normal)
-        view.setTitle("Cancel", for: .normal)
-        view.addTarget(self, action: #selector(cancelButtonPressed(sender:)) , for: .touchUpInside)
-        return view
-    }()
-    
     // MARK: Lifecycle
-    
-    override func viewWillAppear(_ animated: Bool) {
-        let blurEffect = UIBlurEffect(style: .dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(blurEffectView)
-        view.sendSubview(toBack: blurEffectView)
-    }
-    
     override func viewDidLoad() {
+        
+        //navigation bar
+        let rightNavItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveHomePressed(sender:)))
+        
+        self.navigationItem.rightBarButtonItem = rightNavItem
+        self.navigationItem.title = "Create Home"
+        
+        self.view.backgroundColor = Color.clouds
+        
         view.addSubview(nameTextField)
         view.addSubview(addressTextField)
         view.addSubview(cityTextField)
         view.addSubview(zipcodeTextField)
         view.addSubview(stateTextField)
-        view.addSubview(saveHomeButton)
-        view.addSubview(cancelHomeButton)
         
         nameFieldConstraints()
         addressFieldConstraints()
         zipcodeFieldConstraints()
         stateFieldConstraints()
-        saveHomeButtonConstraints()
-        cancelHomeButtonConstraints()
         cityFieldConstraints()
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
@@ -127,13 +103,9 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
             self.present(alert, animated: true, completion: nil)
         } else {
             homeViewModel!.addHome(withName: nameTextField.text!, withAddress: addressTextField.text!,withCity: cityTextField.text!, withZipcode: Int32(zipcodeTextField.text!)!, withState: stateTextField.text!)
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
-    }
-    
-    @IBAction func cancelButtonPressed(sender:UIButton){
-        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: UITextFieldDelegate functions
@@ -144,67 +116,6 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
     }
     
     // MARK: Constraints
-    
-    func cancelHomeButtonConstraints() {
-        
-        NSLayoutConstraint(
-            item: cancelHomeButton,
-            attribute: .centerX,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .centerX,
-            multiplier: 1.0,
-            constant: 0).isActive = true
-        
-        NSLayoutConstraint(
-            item: cancelHomeButton,
-            attribute: .top,
-            relatedBy: .equal,
-            toItem: saveHomeButton,
-            attribute: .bottom,
-            multiplier: 1.0,
-            constant: 25).isActive = true
-        
-        NSLayoutConstraint(
-            item: cancelHomeButton,
-            attribute: .width,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .width,
-            multiplier: 0.75,
-            constant: 0).isActive = true
-    }
-    
-    func saveHomeButtonConstraints() {
-        
-        NSLayoutConstraint(
-            item: saveHomeButton,
-            attribute: .centerX,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .centerX,
-            multiplier: 1.0,
-            constant: 0).isActive = true
-        
-        NSLayoutConstraint(
-            item: saveHomeButton,
-            attribute: .top,
-            relatedBy: .equal,
-            toItem: stateTextField,
-            attribute: .bottom,
-            multiplier: 1.0,
-            constant: 25).isActive = true
-        
-        NSLayoutConstraint(
-            item: saveHomeButton,
-            attribute: .width,
-            relatedBy: .equal,
-            toItem: view,
-            attribute: .width,
-            multiplier: 0.75,
-            constant: 0).isActive = true
-    }
-    
     func stateFieldConstraints() {
         
         NSLayoutConstraint(
@@ -231,7 +142,7 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
             relatedBy: .equal,
             toItem: view,
             attribute: .width,
-            multiplier: 0.75,
+            multiplier: 1,
             constant: 0).isActive = true
     }
     
@@ -261,7 +172,7 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
             relatedBy: .equal,
             toItem: view,
             attribute: .width,
-            multiplier: 0.75,
+            multiplier: 1,
             constant: 0).isActive = true
     }
 
@@ -291,7 +202,7 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
             relatedBy: .equal,
             toItem: view,
             attribute: .width,
-            multiplier: 0.75,
+            multiplier: 1,
             constant: 0).isActive = true
     }
     
@@ -321,7 +232,7 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
             relatedBy: .equal,
             toItem: view,
             attribute: .width,
-            multiplier: 0.75,
+            multiplier: 1,
             constant: 0).isActive = true
     }
     
@@ -342,8 +253,8 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
             relatedBy: .equal,
             toItem: view,
             attribute: .bottom,
-            multiplier: 0.25,
-            constant: 0).isActive = true
+            multiplier: 0.1,
+            constant: 15).isActive = true
         
         NSLayoutConstraint(
             item: nameTextField,
@@ -351,7 +262,7 @@ class HomeInputViewController : UIViewController, Dismissable, UITextFieldDelega
             relatedBy: .equal,
             toItem: view,
             attribute: .width,
-            multiplier: 0.75,
+            multiplier: 1,
             constant: 0).isActive = true
     }
 }
