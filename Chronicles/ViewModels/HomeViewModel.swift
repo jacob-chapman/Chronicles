@@ -13,7 +13,7 @@ import CoreData
 struct HomeViewModel {
     
     private var home = Variable<[Home]>([])
-    private var homeDataAccessModel = HomeDataAccessModel()
+    private var homeDataAccessModel = HomeDataAccessModel(withEntityName: "Home")
     private var disposeBag = DisposeBag()
     
     init(){

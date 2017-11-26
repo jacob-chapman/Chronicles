@@ -13,7 +13,7 @@ import RxSwift
 struct JobsViewModel {
     
     private var jobs = Variable<[Job]>([])
-    private var jobsDataAccessProvider = JobDataAccessModel()
+    private var jobsDataAccessProvider = JobDataAccessModel(withEntityName: "Job")
     private var disposeBag = DisposeBag()
     
     init(){

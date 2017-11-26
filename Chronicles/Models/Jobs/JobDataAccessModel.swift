@@ -10,37 +10,7 @@ import Foundation
 import CoreData
 import RxSwift
 
-class JobDataAccessModel {
-    
-    private var jobsFromCoreData = Variable<[Job]>([])
-    private var managedObjectContext: NSManagedObjectContext
-    
-    init(){
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-    
-        jobsFromCoreData.value = [Job]()
-        managedObjectContext = delegate.persistentContainer.viewContext
-        
-        jobsFromCoreData.value = fetchJobs()
-    }
-    
-    private func fetchJobs() -> [Job]{
-        let jobsFetchRequest = Job.jobsFetchRequest()
-        
-        jobsFetchRequest.returnsObjectsAsFaults = false
-        
-        do {
-            return try managedObjectContext.fetch(jobsFetchRequest)
-        } catch {
-            return []
-        }
-    }
-    
-    // MARK: return observable jobs
-    public func fetchObservableData() -> Observable<[Job]> {
-        jobsFromCoreData.value = fetchJobs()
-        return jobsFromCoreData.asObservable()
-    }
+class JobDataAccessModel : DataAccessModelBase<Job> {
     
     public func addJob(withName name: String, withDueDate dueDate: Date, withNotes notes: String?, assignedTo person: Person?){
         
@@ -54,35 +24,23 @@ class JobDataAccessModel {
             newJob.assignedTo = person
         }
         
-        do {
-            try managedObjectContext.save()
-            jobsFromCoreData.value = fetchJobs()
-        } catch {
-            fatalError("error saving jobs data")
-        }
+        insertElement(withElement: newJob)
     }
     
     // MARK: toggle jobs completed flag
     
     public func toggleJobIsComplete(withIndex index: Int){
-        jobsFromCoreData.value[index].completed = !jobsFromCoreData.value[index].completed
+        elementsFromCoreData.value[index].completed = !elementsFromCoreData.value[index].completed
         
         do{
             try managedObjectContext.save()
-            jobsFromCoreData.value = fetchJobs()
+            updateData()
         } catch {
             fatalError("error toggling job complete")
         }
     }
     
     public func removeJob(withIndex index: Int){
-        managedObjectContext.delete(jobsFromCoreData.value[index])
-        
-        do {
-            try managedObjectContext.save()
-            jobsFromCoreData.value = fetchJobs()
-        } catch {
-            fatalError("error deleting jobs")
-        }
+        removeElement(withIndex: index)
     }
 }
